@@ -6,9 +6,8 @@
 }
 
 body {
-    background-color: rgb(225, 225, 225);
+    background-color: rgb(226, 226, 226);
 }
-
 
 /*HEADER*/
 header div {
@@ -24,6 +23,10 @@ header div {
 
 header div h1 {
     font-size: 300%;
+}
+
+header div h2 {
+    margin: 0px 4vw;
 }
 
 header div nav {
@@ -44,4 +47,57 @@ header section {
 
 header section a{
     color: rgb(255, 255, 255);
+}
+
+
+/*MAIN*/
+
+.recuadro-main {
+    display: flex;
+    padding: 3vh 2vw;
+}
+
+.recuadro-agregar-turnos {
+    margin-left: auto;
+}
+
+.recuadro-agregar-turnos form{
+    background-color: rgb(255, 255, 255);
+    padding: 1vh 1vw;
+    font-size: 120%;
+    border-radius: 10px;
+    margin: 2vh 0vw;
+}
+
+.recuadro-agregar-turnos form div {
+    margin: 1vh 1vw;
+}
+
+.recuadro-agregar-turnos form div input {
+    border-radius: 10px;
+    padding: 1% 1%;
+}
+
+.recuadro-agregar-turnos form #btn-agregar {
+    background-color: rgb(143, 173, 136);
+    color: white;
+    border-style: none;
+    padding: 1vh 1vw;
+    margin: 3vh 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.recuadro-turnos h2 {
+    text-align: center;
+}
+
+.recuadro-turnos .dia {
+    background-color: rgb(255, 255, 255);
+    margin-right: auto;
+    padding: 1vh 1vw;
+    border-radius: 10px;
+    margin: 2vh 2vw;
+    list-style: none;
 }

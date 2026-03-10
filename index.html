@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enero | Planilla Turnos</title>
+    <title>Planilla Turnos</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,13 +12,15 @@
 
 <body>
     <header>
+        <!--NAV primario-->
         <div>
             <h1 id="anio">2026</h1>
+            <h2>Gestor de turnos</h2>
             <nav>
-                <a>Nuevo Año</a>
                 <a>Ayuda</a>
             </nav>
         </div>
+        <!--NAV meses-->
         <section>
             <a>Enero</a>
             <a>Febrero</a>
@@ -34,5 +36,75 @@
             <a>Diciembre</a>
         </section>
     </header>
+    
+    <!--MAIN-->
+    <main>
+        <section class="recuadro-main">
+            <div class="recuadro-turnos">
+                <h2>Turnos</h2>
+                <ul id="dia1" class="dia">
+                    <h3>Dia 1</h3>
+                    <li>Juan Del Valle: De 00:00 a 8:00</li>
+                    <li>Geronimo Salguero: De 8:00 a 16:00</li>
+                    <li>Daiana Perez: De 17:00 a 00:00</li>
+                </ul>
+
+                <ul id="dia2" class="dia">
+                    <h3>Dia 2</h3>
+                    <li>Daiana Perez: De 00:00 a 01:00</li>
+                    <li>Malena Díaz: De 01:00 a 9:00</li>
+                    <li>Daniel Desgarraz: De 9:00 a 17:00</li>
+                </ul>
+
+                <ul id="dia3" class="dia">
+                    <h3>Dia 3</h3>
+                    <li>Juan Del Valle: De 00:00 a 8:00</li>
+                    <li>Geronimo Salguero: De 8:00 a 16:00</li>
+                    <li>Daiana Perez: De 17:00 a 00:00</li>
+                </ul>
+
+                <ul id="dia4" class="dia">
+                    <h3>Dia 4</h3>
+                    <li>Daiana Perez: De 00:00 a 01:00</li>
+                    <li>Malena Díaz: De 01:00 a 9:00</li>
+                    <li>Daniel Desgarraz: De 9:00 a 17:00</li>
+                </ul>
+            </div>
+
+            <div class="recuadro-agregar-turnos">
+                <h2>Agregar turno</h2>
+                <form>
+                    <div>
+                        <label for="nombre-apellido">Nombre Apellido</label>
+                        <input type="text" id="nombre-apellido">
+                    </div><br>
+
+                    <div>
+                        <label for="fecha">Fecha</label>
+                        <input type="number" id="fecha">
+                    </div><br>
+
+                    <div>
+                        <label for="horario-entrada">Desde: </label>
+                        <input type="time" id="horario-entrada">
+                        <label for="horario-salida">Hasta: </label>
+                        <input type="time" id="horario-salida">
+                    </div><br>
+
+                    <div>
+                        <label for="mes">Mes</label>
+                        <input type="text" value="Enero" id="mes" disabled><br>
+                    </div>
+                    <input type="submit" value="Agregar" id="btn-agregar">
+                </form>
+            </div>
+        </section>
+        
+
+        <footer>
+
+        </footer>
+
+    </main>
 </body>
 </html>
