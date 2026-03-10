@@ -89,6 +89,7 @@ header section a{
 .recuadro-agregar-turnos form div input {
     border-radius: 10px;
     padding: 1% 1%;
+    border: 3px solid rgb(27, 64, 121);
 }
 
 .recuadro-agregar-turnos form #btn-agregar {
@@ -121,6 +122,10 @@ header section a{
     border-radius: 10px;
     list-style: none;
     margin: 2vh 0vw;
+}
+
+.recuadro-turnos .dia h3 {
+    margin-bottom: 2%;
 }
 
 
