@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+    background-color: rgb(225, 225, 225);
+}
+
+
+/*HEADER*/
+header div {
+    background-color: rgb(27, 64, 121);
+    color: white;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+
+header div h1 {
+    font-size: 300%;
+}
+
+header div nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 2vw;
+    gap: 2vw;
+    font-size: 120%;
+}
+
+header section {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(77, 124, 138);
+    padding: 1vh 1vw;
+}
+
+header section a{
+    color: rgb(255, 255, 255);
+}
