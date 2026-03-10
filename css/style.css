@@ -10,12 +10,15 @@ body {
 }
 
 /*HEADER*/
-header div {
-    background-color: rgb(27, 64, 121);
-    color: white;
+header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
 }
 
 header div {
+    background-color: rgb(27, 64, 121);
+    color: white;
     display: flex;
     align-items: center;
     padding: 1vh 1vw;
@@ -48,7 +51,7 @@ header section {
 header section a{
     color: rgb(255, 255, 255);
 }
-
+/*---------------------------------------------------*/
 
 /*MAIN*/
 
@@ -57,8 +60,18 @@ header section a{
     padding: 3vh 2vw;
 }
 
+
+/*---------------------------------------------------*/
+/*MAIN AGREGAR TURNOS*/
 .recuadro-agregar-turnos {
-    margin-left: auto;
+    margin-left: 50%;
+    margin-top: 2vh;
+    width: 40vw;
+    position: fixed;
+}
+
+.recuadro-agregar-turnos h2 {
+    text-align: left;
 }
 
 .recuadro-agregar-turnos form{
@@ -89,8 +102,16 @@ header section a{
     font-size: 100%;
 }
 
+
+/*---------------------------------------------------*/
+/*MAIN TURNOS*/
+.recuadro-turnos {
+    width: 40vw;
+    margin: 2vh 2vw;
+}
+
 .recuadro-turnos h2 {
-    text-align: center;
+    text-align: left;
 }
 
 .recuadro-turnos .dia {
@@ -98,6 +119,23 @@ header section a{
     margin-right: auto;
     padding: 1vh 1vw;
     border-radius: 10px;
-    margin: 2vh 2vw;
     list-style: none;
+    margin: 2vh 0vw;
+}
+
+
+/*---------------------------------------------------*/
+/*FOOTER*/
+
+footer {
+    background-color: rgb(203, 223, 144);
+    color: rgb(77, 124, 138);
+    padding: 2vh 0vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    font-size: 100%;
 }
