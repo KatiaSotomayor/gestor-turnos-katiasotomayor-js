@@ -42,5 +42,168 @@
             "area": "IT",
             "estado": ""
         }
+    ],
+    
+    "turnos": [
+        {
+            "año": ""
+        },
+        {
+            "enero": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "febrero": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "marzo": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "abril": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "mayo": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "junio": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "julio": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "agosto": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "septiembre": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "octubre": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        
+        {
+            "noviembre": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        },
+        {
+            "diciembre": [
+                {
+                    "id_trabajador": 1,
+                    "nom_ape": "Juan Castañeda",
+                    "puesto": "DevOps",
+                    "mes": "",
+                    "dia": "",
+                    "entrada": "",
+                    "salida": ""
+                }
+            ]
+        }
     ]
 }
