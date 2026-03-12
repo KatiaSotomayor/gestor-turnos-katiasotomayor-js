@@ -1,0 +1,46 @@
+{
+    "empleados": [
+        {
+            "id_trabajador": 1,
+            "nom_ape": "Juan Castañeda",
+            "puesto": "DevOps",
+            "area": "IT",
+            "estado": ""
+        },
+        {
+            "id_trabajador": 2,
+            "nom_ape": "Diana Perez",
+            "puesto": "Analista de seguridad",
+            "area": "IT",
+            "estado": ""
+        },
+        {
+            "id_trabajador": 3,
+            "nom_ape": "Ramona Degrazed",
+            "puesto": "Software Engineer",
+            "area": "IT",
+            "estado": ""
+        },
+        {
+            "id_trabajador": 4,
+            "nom_ape": "Ronald Vegas",
+            "puesto": "Analista de Seguridad",
+            "area": "IT",
+            "estado": ""
+        },
+        {
+            "id_trabajador": 5,
+            "nom_ape": "Abigail Perez",
+            "puesto": "Software Engineer",
+            "area": "IT",
+            "estado": ""
+        },
+        {
+            "id_trabajador": 6,
+            "nom_ape": "Angie Heraldo",
+            "puesto": "DevOps",
+            "area": "IT",
+            "estado": ""
+        }
+    ]
+}
