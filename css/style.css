@@ -103,6 +103,10 @@ header section a{
     font-size: 100%;
 }
 
+.recuadro-agregar-turnos form #btn-agregar:hover {
+    background-color: rgb(102, 137, 94);
+}
+
 
 /*---------------------------------------------------*/
 /*MAIN TURNOS*/
