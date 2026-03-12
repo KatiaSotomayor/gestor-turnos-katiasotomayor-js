@@ -2,7 +2,20 @@
 const url = "../db/data.json"
 fetch(url)
     .then(response => response.json())
-    .then(json => console.log(json))
+    .then(json => {
+        console.log(json);
+
+        const select_nom_ape = document.getElementById("select-nombre-apellido");
+
+        //AUTOLLENADO DE <OPTION> PARA QUE SOLO SE PUEDAN ELEGIR A LOS EMPLEADOS EXISTENTES PARA AÑADIRLE UN TURNO
+        json.empleados.forEach (empleado => {          
+            select_nom_ape.innerHTML += `
+            <option value="${empleado. id_trabajador}">${empleado.nom_ape}</option>
+            `;
+        });
+    });
+
+    
 
 //LISTA PARA ALMACENAR TURNOS
 let turnos = []
@@ -12,7 +25,7 @@ const formulario = document.getElementById("form-turnos")
 //TOMA DE VALORES DEL FORM AL HACER CLICK EN EL BTN SUBMIT
 formulario.addEventListener("submit", function (event) {
     event.preventDefault()
-    
+
     const nom_ape = document.getElementById("nombre-apellido").value
     const fecha = document.getElementById("fecha").value
     const entrada = document.getElementById("horario-entrada").value
