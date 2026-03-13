@@ -1,197 +1,61 @@
 {
-    "empleados": [
-        {
-            "id_trabajador": 1,
-            "nom_ape": "Juan Castañeda",
-            "puesto": "DevOps",
-            "area": "IT",
-            "estado": ""
-        },
-        {
-            "id_trabajador": 2,
-            "nom_ape": "Diana Perez",
-            "puesto": "Analista de seguridad",
-            "area": "IT",
-            "estado": ""
-        },
-        {
-            "id_trabajador": 3,
-            "nom_ape": "Ramona Degrazed",
-            "puesto": "Software Engineer",
-            "area": "IT",
-            "estado": ""
-        },
-        {
-            "id_trabajador": 4,
-            "nom_ape": "Ronald Vegas",
-            "puesto": "Analista de Seguridad",
-            "area": "IT",
-            "estado": ""
-        },
-        {
-            "id_trabajador": 5,
-            "nom_ape": "Abigail Perez",
-            "puesto": "Software Engineer",
-            "area": "IT",
-            "estado": ""
-        },
-        {
-            "id_trabajador": 6,
-            "nom_ape": "Angie Heraldo",
-            "puesto": "DevOps",
-            "area": "IT",
-            "estado": ""
-        }
-    ],
-    
-    "turnos": [
-        {
-            "año": ""
-        },
-        {
-            "enero": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "febrero": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "marzo": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "abril": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "mayo": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "junio": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "julio": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "agosto": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "septiembre": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "octubre": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        
-        {
-            "noviembre": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        },
-        {
-            "diciembre": [
-                {
-                    "id_trabajador": 1,
-                    "nom_ape": "Juan Castañeda",
-                    "puesto": "DevOps",
-                    "dia": "",
-                    "entrada": "",
-                    "salida": ""
-                }
-            ]
-        }
-    ]
+  "empleados": [
+    {
+      "id_trabajador": 1,
+      "nom_ape": "Juan Castañeda",
+      "puesto": "DevOps",
+      "area": "IT",
+      "estado": ""
+    },
+    {
+      "id_trabajador": 2,
+      "nom_ape": "Diana Perez",
+      "puesto": "Analista de seguridad",
+      "area": "IT",
+      "estado": ""
+    },
+    {
+      "id_trabajador": 3,
+      "nom_ape": "Ramona Degrazed",
+      "puesto": "Software Engineer",
+      "area": "IT",
+      "estado": ""
+    },
+    {
+      "id_trabajador": 4,
+      "nom_ape": "Ronald Vegas",
+      "puesto": "Analista de Seguridad",
+      "area": "IT",
+      "estado": ""
+    },
+    {
+      "id_trabajador": 5,
+      "nom_ape": "Abigail Perez",
+      "puesto": "Software Engineer",
+      "area": "IT",
+      "estado": ""
+    },
+    {
+      "id_trabajador": 6,
+      "nom_ape": "Angie Heraldo",
+      "puesto": "DevOps",
+      "area": "IT",
+      "estado": ""
+    }
+  ],
+
+  "turnos": {
+    "enero": [],
+    "febrero": [],
+    "marzo": [],
+    "abril": [],
+    "mayo": [],
+    "junio": [],
+    "julio": [],
+    "agosto": [],
+    "septiembre": [],
+    "octubre": [],
+    "noviembre": [],
+    "diciembre": []
+  }
 }
