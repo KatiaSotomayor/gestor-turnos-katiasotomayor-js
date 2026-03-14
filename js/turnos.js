@@ -27,18 +27,32 @@ fetch(url)
             const v_salida = document.getElementById("horario-salida").value
             const v_mes = document.getElementById("mes").value.toLowerCase();
 
-            //ALMACENAMIENTO DE DATOS EN UNA VARIABLE
-            const turno = {
-                nom_ape: v_nombre_ape,
-                dia: v_fecha,
-                entrada: v_entrada,
-                salida: v_salida,
-            }
+            if (v_nombre_ape == "") {
+                console.log("Nombre no tiene un valor");
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: "El campo 'Nombre y Apellido' no tiene ningún valor. Por favor, ingresar uno",
+                    confirmButtonColor: 'rgb(143, 173, 136)'
+                });
+            } else if (v_entrada.value == "") {
+                console.log("Entrada no tiene un valor");
+            } else if (v_salida.value == "") {
+                console.log("Salida no tiene un valor");
+            } else {
+                //ALMACENAMIENTO DE DATOS EN UNA VARIABLE
+                const turno = {
+                    nom_ape: v_nombre_ape,
+                    dia: v_fecha,
+                    entrada: v_entrada,
+                    salida: v_salida,
+                }
 
-            //SE AGREGA A LA LISTA Y SE AGREGA EL NUEVO TURNO AL HTML
-            json.turnos[v_mes].push(turno)
-            agregar_al_html(turno)
-            formulario.reset()
+                //SE AGREGA A LA LISTA Y SE AGREGA EL NUEVO TURNO AL HTML
+                json.turnos[v_mes].push(turno)
+                agregar_al_html(turno)
+                formulario.reset()
+            }
         });
 
 
@@ -50,4 +64,13 @@ fetch(url)
             <hr><li>${turno.nom_ape}: De ${turno.entrada} a ${turno.salida}</li>
             `;
         }
-    });
+    })
+    .catch(error => {
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: error,
+            confirmButtonColor: 'rgb(143, 173, 136)'
+        });
+    }
+)
