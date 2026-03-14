@@ -35,18 +35,24 @@ fetch(url)
                 salida: v_salida,
             }
 
-            //SE AGREGA A LA LISTA Y SE AGREGA EL NUEVO TURNO AL HTML
-            json.turnos[v_mes].push(turno)
-            agregar_al_html(turno)
-            Swal.fire({
-                title: "Turno agregado con éxito!",
-                icon: "success",
-                draggable: true,
-                confirmButtonColor: 'rgb(143, 173, 136)'
-            });
-            formulario.reset()
-            modificacion_date()
+            const label_ultima_mod = document.getElementById('label_ultima_mod');
+            label_ultima_mod.innerText = `Agregando..`;
 
+            //SE AGREGA A LA LISTA Y SE AGREGA EL NUEVO TURNO AL HTML
+            let cargando = setTimeout (() => {
+                json.turnos[v_mes].push(turno)
+                agregar_al_html(turno)
+                formulario.reset()
+                modificacion_date()
+                Swal.fire({
+                    title: "Turno agregado con éxito!",
+                    icon: "success",
+                    draggable: true,
+                    confirmButtonColor: 'rgb(143, 173, 136)'
+                });
+            }, 2000)
+
+            
         });
 
 
@@ -64,7 +70,6 @@ fetch(url)
         function modificacion_date () {
             let fecha_mod = new Date();
             const label_ultima_mod = document.getElementById('label_ultima_mod');
-
             label_ultima_mod.innerText = `Ultima modificación: ${fecha_mod}`;
         }
 
