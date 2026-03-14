@@ -45,7 +45,11 @@ fetch(url)
                 confirmButtonColor: 'rgb(143, 173, 136)'
             });
             formulario.reset()
+            modificacion_date()
+
         });
+
+
 
 
         //FUNCION PARA AGREGAR EL NUEVO TURNO A HTML
@@ -56,6 +60,15 @@ fetch(url)
             <hr><li>${turno.nom_ape}: De ${turno.entrada} a ${turno.salida}</li>
             `;
         }
+
+        function modificacion_date () {
+            let fecha_mod = new Date();
+            const label_ultima_mod = document.getElementById('label_ultima_mod');
+
+            label_ultima_mod.innerText = `Ultima modificación: ${fecha_mod}`;
+        }
+
+
     })
     .catch(error => {
         Swal.fire({
