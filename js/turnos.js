@@ -7,7 +7,7 @@ fetch(url)
 
         const select_nom_ape = document.getElementById("select-nombre-apellido");
 
-        
+
         //AUTOLLENADO DE <OPTION> PARA QUE SOLO SE PUEDAN ELEGIR A LOS EMPLEADOS EXISTENTES PARA AÑADIRLE UN TURNO
         json.empleados.forEach(empleado => {
             select_nom_ape.innerHTML += `
@@ -38,8 +38,6 @@ fetch(url)
             //SE AGREGA A LA LISTA Y SE AGREGA EL NUEVO TURNO AL HTML
             json.turnos[v_mes].push(turno)
             agregar_al_html(turno)
-
-            //Y SE LIMPIA EL FORM
             formulario.reset()
         });
 
@@ -49,7 +47,7 @@ fetch(url)
             const turno_agregado = document.getElementById("dia" + turno.dia)
 
             turno_agregado.innerHTML += `
-        <hr><li>${turno.nom_ape}: De ${turno.entrada} a ${turno.salida}</li>
-        `;
+            <hr><li>${turno.nom_ape}: De ${turno.entrada} a ${turno.salida}</li>
+            `;
         }
     });
