@@ -52,7 +52,9 @@ header section {
 
 header section a{
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
+
 
 /*---------------------------------------------------*/
 /*MAIN TURNOS*/
@@ -119,6 +121,10 @@ header section a{
 
 .recuadro-turnos h2 {
     text-align: left;
+}
+
+.recuadro-turnos .hr-separacion {
+    border: solid black 2px;
 }
 
 .recuadro-turnos .dia {
