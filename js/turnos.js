@@ -1,11 +1,13 @@
 //iMPORTAR JSON CON LA INFO DE LOS EMPLEADOS
-const url = "../db/data.json"
+const url = "./db/data.json"
 
-function f_turno(nom_ape, dia, entrada, salida) {
-    this.nom_ape = nom_ape;
-    this.dia = dia;
-    this.entrada = entrada;
-    this.salida = salida;
+class f_turno {
+    constructor(nom_ape, dia, entrada, salida) {
+        this.nom_ape = nom_ape;
+        this.dia = dia;
+        this.entrada = entrada;
+        this.salida = salida;
+    }
 }
 
 
@@ -15,16 +17,26 @@ fetch(url)
         console.log(json);
 
         const select_nom_ape = document.getElementById("select-nombre-apellido");
-
+        const formulario = document.getElementById("form-turnos")
+        const label_ultima_mod = document.getElementById('label_ultima_mod');
 
         //AUTOLLENADO DE <OPTION> PARA QUE SOLO SE PUEDAN ELEGIR A LOS EMPLEADOS EXISTENTES PARA AÑADIRLE UN TURNO
         json.empleados.forEach(empleado => {
-            select_nom_ape.innerHTML += `
-            <option value="${empleado.nom_ape}">${empleado.nom_ape}</option>
-            `;
+            const option_html = document.createElement("option");
+            option_html.value = empleado.nom_ape;
+            option_html.textContent = empleado.nom_ape;
+            select_nom_ape.appendChild(option_html);
         });
 
-        const formulario = document.getElementById("form-turnos")
+        const turnos_guardados = JSON.parse(localStorage.getItem("turnos"));
+
+        //NO SACAR, MUESTRA LOS TURNOS
+        for (let mes in turnos_guardados) {
+            let lista = turnos_guardados[mes];
+            lista.forEach(turno => {
+                agregar_al_html(turno, mes);
+            });
+        }
 
         //TOMA DE VALORES DEL FORM AL HACER CLICK EN EL BTN SUBMIT
         formulario.addEventListener("submit", function (event) {
@@ -34,9 +46,7 @@ fetch(url)
             const v_fecha = document.getElementById("fecha").value
             const v_entrada = document.getElementById("horario-entrada").value
             const v_salida = document.getElementById("horario-salida").value
-            const v_mes = document.getElementById("mes").value.toLowerCase();
-
-            const label_ultima_mod = document.getElementById('label_ultima_mod');
+            const v_mes = document.getElementById("mes").value.toLowerCase();            
 
             if ((v_fecha > 29 && v_mes == "febrero") || (v_fecha > 30 && (v_mes == "abril" || v_mes == "junio" || v_mes == "septiembre" || v_mes == "noviembre"))) {
                 Swal.fire({
@@ -59,10 +69,17 @@ fetch(url)
                 let cargando = setTimeout(() => {
                     try {
                         //SE INTENTA AGREGAR AL HTML
-                        json.turnos[v_mes].push(turno)
-                        agregar_al_html(turno)
+                        let turno_guardado = JSON.parse(localStorage.getItem("turnos")) || {};
+
+                        turno_guardado[v_mes].push(turno);
+
+                        localStorage.setItem("turnos", JSON.stringify(turno_guardado));
+                        
+
+                        agregar_al_html(turno, v_mes)
                         formulario.reset()
                         modificacion_date()
+
                         Swal.fire({
                             title: "Turno agregado con éxito!",
                             icon: "success",
@@ -81,26 +98,24 @@ fetch(url)
                     } finally {
 
                     }
-
                 }, 2000)
-
-                //FUNCION PARA AGREGAR EL NUEVO TURNO A HTML
-                function agregar_al_html(turno) {
-                    const turno_agregado = document.getElementById(v_mes + "-dia" + turno.dia)
-
-                    turno_agregado.innerHTML += `
-                    <hr><li>${turno.nom_ape}: De ${turno.entrada} a ${turno.salida}</li>
-                    `;
-                }
-
-                function modificacion_date() {
-                    let fecha_mod = new Date();
-                    label_ultima_mod.innerText = `Ultima modificación: ${fecha_mod}`;
-                }
             }
-
-
         });
+
+        //FUNCION PARA AGREGAR EL NUEVO TURNO A HTML
+        function agregar_al_html(turno, mes) {
+            const turno_agregado = document.getElementById(mes + "-dia" + turno.dia)
+            const li = document.createElement("li");
+            li.textContent = `${turno.nom_ape}: De ${turno.entrada} a ${turno.salida}`;
+            turno_agregado.appendChild(document.createElement("hr"));
+            turno_agregado.appendChild(li);
+
+        }
+
+        function modificacion_date() {
+            let fecha_mod = new Date();
+            label_ultima_mod.innerText = `Ultima modificación: ${fecha_mod}`;
+        }
 
     })
     .catch(error => {

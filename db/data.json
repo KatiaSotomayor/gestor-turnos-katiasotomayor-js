@@ -42,20 +42,5 @@
       "area": "IT",
       "estado": "Activo"
     }
-  ],
-
-  "turnos": {
-    "enero": [],
-    "febrero": [],
-    "marzo": [],
-    "abril": [],
-    "mayo": [],
-    "junio": [],
-    "julio": [],
-    "agosto": [],
-    "septiembre": [],
-    "octubre": [],
-    "noviembre": [],
-    "diciembre": []
-  }
+  ]
 }
