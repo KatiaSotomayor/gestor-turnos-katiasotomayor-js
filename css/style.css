@@ -43,6 +43,11 @@ header div nav {
     font-size: 120%;
 }
 
+header div nav a{
+    text-decoration: none;
+    color: white;
+}
+
 header section {
     display: flex;
     justify-content: space-evenly;
@@ -155,4 +160,9 @@ footer {
 
 footer p {
     font-size: 100%;
+}
+
+footer p a{
+    color: rgb(77, 124, 138);
+    text-decoration: none;
 }

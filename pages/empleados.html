@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enero | Turnos</title>
+    <title>Empleados</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,73 +15,22 @@
         <!--NAV primario-->
         <div>
             <h1 id="anio">2026</h1>
-            <h2>ENERO | Gestor de turnos</h2>
+            <h2>Gestor de turnos</h2>
             <nav>
+                <a href="../index.html">Turnos</a>
                 <a>Empleados</a>
-                <a>Ayuda</a>
             </nav>
         </div>
-        <!--NAV meses-->
-        <section>
-            <a>Enero</a>
-            <a>Febrero</a>
-            <a>Marzo</a>
-            <a>Abril</a>
-            <a>Mayo</a>
-            <a>Junio</a>
-            <a>Julio</a>
-            <a>Agosto</a>
-            <a>Septiembre</a>
-            <a>Octubre</a>
-            <a>Noviembre</a>
-            <a>Diciembre</a>
-        </section>
+        
     </header>
     
     <!--MAIN-->
     <main>
         <section class="recuadro-main">
             <!--REACUADRO DE LOS DIAS CON LOS TURNOS ASIGNADOS ENLISTADOS-->
-            <div class="recuadro-turnos">
+            <div class="recuadro-turnos" id="recuadro-turnos">
                 <h2>Empleados</h2>
-                <ul id="empleado1" class="dia">
-                    <h3>Nombre y apellido</h3>
-                </ul>
-
-                <ul id="empleado2" class="dia">
-                    <h3>Nombre y Apellido</h3>
-                </ul>
-            </div>
-
-            <div class="recuadro-agregar-turnos">
-                <!--RECUADRO PARA AGREGAR UN TURNO DE UN EMPLEADO SEGUN DIA Y HORAS-->
-                <h2>Agregar turno</h2>
-                <form id="form-turnos">
-                    <div>
-                        <label for="nombre-apellido">Nombre Apellido</label>
-                        <select name="nombre-apellido" id="select-nombre-apellido" required>
-                            <option value=""></option>
-                        </select>
-                    </div><br>
-
-                    <div>
-                        <label for="fecha">Dia</label>
-                        <input type="number" id="fecha" max="31" min="1" required>
-                    </div><br>
-
-                    <div>
-                        <label for="horario-entrada">Desde: </label>
-                        <input type="time" id="horario-entrada" required>
-                        <label for="horario-salida">Hasta: </label>
-                        <input type="time" id="horario-salida" required>
-                    </div><br>
-
-                    <div>
-                        <label for="mes">Mes</label>
-                        <input type="text" value="Enero" id="mes" disabled><br>
-                    </div>
-                    <input type="submit" value="Agregar" id="btn-agregar">
-                </form>
+                
             </div>
         </section>
         
@@ -93,36 +42,36 @@
             </div>
 
             <div>
-                <p><a>Enero</a></p>
-                <p><a>Febrero</a></p>
-                <p><a>Marzo</a></p>
-                <p><a>Abril</a></p>
+                <p><a href="../index.html">Enero</a></p>
+                <p><a href="../index.html">Febrero</a></p>
+                <p><a href="../index.html">Marzo</a></p>
+                <p><a href="../index.html">Abril</a></p>
             </div>
 
             <div>
-                <p><a>Mayo</a></p>
-                <p><a>Junio</a></p>
-                <p><a>Julio</a></p>
-                <p><a>Agosto</a></p>
+                <p><a  href="../index.html">Mayo</a></p>
+                <p><a  href="../index.html">Junio</a></p>
+                <p><a  href="../index.html">Julio</a></p>
+                <p><a  href="../index.html">Agosto</a></p>
             </div>
 
             <div>
-                <p><a>Septiembre</a></p>
-                <p><a>Octubre</a></p>
-                <p><a>Noviembre</a></p>
-                <p><a>Diciembre</a></p>
+                <p><a href="../index.html">Septiembre</a></p>
+                <p><a href="../index.html">Octubre</a></p>
+                <p><a href="../index.html">Noviembre</a></p>
+                <p><a href="../index.html">Diciembre</a></p>
             </div>
             
             <div>
+                <p><a href="../index.html">Turnos</a></p>
                 <p><a>Empleados</a></p>
-                <p><a>Ayuda</a></p>
             </div>
             
         </footer>
 
     </main>
 
-    <script src="../js/turnos.js"></script>
+    <script src="../js/empleados.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
