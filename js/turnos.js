@@ -14,8 +14,6 @@ class f_turno {
 fetch(url)
     .then(response => response.json())
     .then(json => {
-        console.log(json);
-
         const select_nom_ape = document.getElementById("select-nombre-apellido");
         const formulario = document.getElementById("form-turnos")
         const label_ultima_mod = document.getElementById('label_ultima_mod');

@@ -3,7 +3,6 @@ const url = "../db/data.json"
 fetch(url)
     .then(response => response.json())
     .then(json => {
-        console.log(json);
 
         //AUTORRELLENADO CON DATOS YA CARGADOS DE LOS EMPLEADOS
         const contenedor = document.getElementById("recuadro-turnos");
