@@ -14,8 +14,6 @@ class f_turno {
 fetch(url)
     .then(response => response.json())
     .then(json => {
-        console.log(json);
-
         const select_nom_ape = document.getElementById("select-nombre-apellido");
         const formulario = document.getElementById("form-turnos")
         const label_ultima_mod = document.getElementById('label_ultima_mod');
@@ -31,12 +29,12 @@ fetch(url)
         const turnos_guardados = JSON.parse(localStorage.getItem("turnos"));
 
         //NO SACAR, MUESTRA LOS TURNOS
-        for (let mes in turnos_guardados) {
-            let lista = turnos_guardados[mes];
-            lista.forEach(turno => {
-                agregar_al_html(turno, mes);
-            });
-        }
+        //for (let mes in turnos_guardados) {
+         //   let lista = turnos_guardados[mes];
+          //  lista.forEach(turno => {
+           //     agregar_al_html(turno, mes);
+            //});
+        //}
 
         //TOMA DE VALORES DEL FORM AL HACER CLICK EN EL BTN SUBMIT
         formulario.addEventListener("submit", function (event) {
