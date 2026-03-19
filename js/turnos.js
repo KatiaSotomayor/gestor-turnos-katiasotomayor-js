@@ -26,7 +26,7 @@ fetch(url)
             select_nom_ape.appendChild(option_html);
         });
 
-        const turno_guardados = JSON.parse(localStorage.getItem("turnos"));
+        const turnos_guardados = JSON.parse(localStorage.getItem("turnos"));
 
         //NO SACAR, MUESTRA LOS TURNOS
         for (let mes in turnos_guardados) {
