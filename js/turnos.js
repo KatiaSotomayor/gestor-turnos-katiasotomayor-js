@@ -26,15 +26,15 @@ fetch(url)
             select_nom_ape.appendChild(option_html);
         });
 
-        const turnos_guardados = JSON.parse(localStorage.getItem("turnos"));
+        const turno_guardados = JSON.parse(localStorage.getItem("turnos"));
 
         //NO SACAR, MUESTRA LOS TURNOS
-        //for (let mes in turnos_guardados) {
-         //   let lista = turnos_guardados[mes];
-          //  lista.forEach(turno => {
-           //     agregar_al_html(turno, mes);
-            //});
-        //}
+        for (let mes in turnos_guardados) {
+            let lista = turnos_guardados[mes];
+            lista.forEach(turno => {
+                agregar_al_html(turno, mes);
+            });
+        }
 
         //TOMA DE VALORES DEL FORM AL HACER CLICK EN EL BTN SUBMIT
         formulario.addEventListener("submit", function (event) {
