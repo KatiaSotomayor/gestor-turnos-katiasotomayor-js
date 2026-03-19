@@ -1,5 +1,5 @@
 //iMPORTAR JSON CON LA INFO DE LOS EMPLEADOS
-const url = "./db/data.json"
+const url = "../db/data.json"
 
 class f_turno {
     constructor(nom_ape, dia, entrada, salida) {
@@ -8,6 +8,33 @@ class f_turno {
         this.entrada = entrada;
         this.salida = salida;
     }
+}
+
+
+//FUNCION PARA CREAR LA ESTRUCTURA BASE
+function iniciar_turnos() {
+    //vA A LEER LOS TURNOS
+    let turnos = JSON.parse(localStorage.getItem("turnos"));
+
+    //SI ES NULL, UNDEFINED, FALSE ETC
+    if (!turnos) {
+        turnos = {
+            enero: [],
+            febrero: [],
+            marzo: [],
+            abril: [],
+            mayo: [],
+            junio: [],
+            julio: [],
+            agosto: [],
+            septiembre: [],
+            octubre: [],
+            noviembre: [],
+            diciembre: []
+        };
+        localStorage.setItem("turnos", JSON.stringify(turnos));
+    }
+    return turnos;
 }
 
 
@@ -26,7 +53,7 @@ fetch(url)
             select_nom_ape.appendChild(option_html);
         });
 
-        const turnos_guardados = JSON.parse(localStorage.getItem("turnos"));
+        const turnos_guardados = iniciar_turnos();
 
         //NO SACAR, MUESTRA LOS TURNOS
         for (let mes in turnos_guardados) {
@@ -36,6 +63,7 @@ fetch(url)
             });
         }
 
+
         //TOMA DE VALORES DEL FORM AL HACER CLICK EN EL BTN SUBMIT
         formulario.addEventListener("submit", function (event) {
             event.preventDefault()
@@ -44,8 +72,9 @@ fetch(url)
             const v_fecha = document.getElementById("fecha").value
             const v_entrada = document.getElementById("horario-entrada").value
             const v_salida = document.getElementById("horario-salida").value
-            const v_mes = document.getElementById("mes").value.toLowerCase();            
+            const v_mes = document.getElementById("select-mes").value.toLowerCase();
 
+            //VALIDACION DE DIAS DEL MES
             if ((v_fecha > 29 && v_mes == "febrero") || (v_fecha > 30 && (v_mes == "abril" || v_mes == "junio" || v_mes == "septiembre" || v_mes == "noviembre"))) {
                 Swal.fire({
                     icon: "error",
@@ -67,12 +96,12 @@ fetch(url)
                 let cargando = setTimeout(() => {
                     try {
                         //SE INTENTA AGREGAR AL HTML
-                        let turno_guardado = JSON.parse(localStorage.getItem("turnos")) || {};
+                        let turno_guardado = iniciar_turnos();
 
                         turno_guardado[v_mes].push(turno);
 
                         localStorage.setItem("turnos", JSON.stringify(turno_guardado));
-                        
+
 
                         agregar_al_html(turno, v_mes)
                         formulario.reset()
