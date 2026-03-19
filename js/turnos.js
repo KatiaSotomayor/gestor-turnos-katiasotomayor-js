@@ -1,5 +1,5 @@
 //iMPORTAR JSON CON LA INFO DE LOS EMPLEADOS
-const url = "../db/data.json"
+const url = "/db/data.json"
 
 class f_turno {
     constructor(nom_ape, dia, entrada, salida) {
